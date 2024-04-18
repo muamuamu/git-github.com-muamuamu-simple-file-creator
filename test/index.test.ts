@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest'
-import { SimpleFileCreator } from '../src'
+import SimpleFileCreator from '../src'
 import { resolve } from 'node:path'
 import { pathExistsSync } from 'fs-extra'
 
@@ -20,40 +20,40 @@ it('Check if the file exists', function () {
               "base": "hellow.ts",
               "children": [],
               "cover": true,
-              "dir": "D:\\workspace\\file-scope\\test\\folder\\sub",
+              "dir": "D:\\workspace\\simple-file-creator\\test\\folder\\sub",
               "ext": ".ts",
               "name": "hellow",
               "parent": [Circular],
-              "path": "D:\\workspace\\file-scope\\test\\folder\\sub\\hellow.ts",
+              "path": "D:\\workspace\\simple-file-creator\\test\\folder\\sub\\hellow.ts",
               "root": "D:\\",
             },
             SimpleFileCreator {
               "base": "world.ts",
               "children": [],
               "cover": true,
-              "dir": "D:\\workspace\\file-scope\\test\\folder\\sub",
+              "dir": "D:\\workspace\\simple-file-creator\\test\\folder\\sub",
               "ext": ".ts",
               "name": "world",
               "parent": [Circular],
-              "path": "D:\\workspace\\file-scope\\test\\folder\\sub\\world.ts",
+              "path": "D:\\workspace\\simple-file-creator\\test\\folder\\sub\\world.ts",
               "root": "D:\\",
             },
           ],
           "cover": true,
-          "dir": "D:\\workspace\\file-scope\\test\\folder",
+          "dir": "D:\\workspace\\simple-file-creator\\test\\folder",
           "ext": "",
           "name": "sub",
           "parent": [Circular],
-          "path": "D:\\workspace\\file-scope\\test\\folder\\sub",
+          "path": "D:\\workspace\\simple-file-creator\\test\\folder\\sub",
           "root": "D:\\",
         },
       ],
       "cover": true,
-      "dir": "D:\\workspace\\file-scope\\test",
+      "dir": "D:\\workspace\\simple-file-creator\\test",
       "ext": "",
       "name": "folder",
       "parent": null,
-      "path": "D:\\workspace\\file-scope\\test\\folder",
+      "path": "D:\\workspace\\simple-file-creator\\test\\folder",
       "root": "D:\\",
     }
   `)

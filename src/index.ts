@@ -1,9 +1,7 @@
-import { ensureDirSync, pathExistsSync, removeSync, outputFileSync, outputFile } from 'fs-extra'
+import { ensureDirSync, pathExistsSync, removeSync, outputFileSync } from 'fs-extra'
 import { parse, type ParsedPath, join } from 'node:path'
 
-type FileType = 'folder' | 'file'
-
-export class SimpleFileCreator {
+export default class SimpleFileCreator {
   path = ''
   name = ''
   ext = ''
