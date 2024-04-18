@@ -45,3 +45,6 @@ ts.delete()
 sub.delete()
 //folder
 ```
+## License
+
+[MIT](./LICENSE) License © 2024-PRESENT [muamuamu](https://github.com/muamuamu)
