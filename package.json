@@ -1,15 +1,13 @@
 {
   "name": "simple-file-creator",
-  "version": "1.0.1",
-  "description": "",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "version": "1.1.0",
+  "description": "A library for creating file structures through simple node operations.",
   "type": "module",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
+      "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     }
   },
@@ -17,12 +15,14 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --dts --format esm,cjs --clean",
+    "build": "npx unbuild",
     "lint": "eslint src test --fix",
     "test": "vitest",
     "prepare": "simple-git-hooks"
   },
-  "keywords": ["file"],
+  "keywords": [
+    "file"
+  ],
   "author": "muamuamu",
   "license": "MIT",
   "devDependencies": {
@@ -32,8 +32,8 @@
     "@typescript-eslint/parser": "^7.7.0",
     "lint-staged": "^15.2.2",
     "simple-git-hooks": "^2.11.1",
-    "tsup": "^8.0.2",
     "typescript": "^5.4.5",
+    "unbuild": "^2.0.0",
     "vitest": "^1.5.0"
   },
   "simple-git-hooks": {

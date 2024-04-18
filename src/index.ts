@@ -1,5 +1,7 @@
-import { ensureDirSync, pathExistsSync, removeSync, outputFileSync } from 'fs-extra'
+import fs from 'fs-extra'
 import { parse, type ParsedPath, join } from 'node:path'
+
+const { ensureDirSync, pathExistsSync, removeSync, outputFileSync } = fs
 
 export default class SimpleFileCreator {
   path = ''
