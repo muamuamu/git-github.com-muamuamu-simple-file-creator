@@ -1,0 +1,47 @@
+{
+  "name": "simple-file-creator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm --clean",
+    "lint": "eslint src test --fix",
+    "test": "vitest",
+    "prepare": "simple-git-hooks"
+  },
+  "keywords": ["file"],
+  "author": "muamuamu",
+  "license": "ISC",
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^1.7.2",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.12.7",
+    "@typescript-eslint/parser": "^7.7.0",
+    "lint-staged": "^15.2.2",
+    "simple-git-hooks": "^2.11.1",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0"
+  }
+}
